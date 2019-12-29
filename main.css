@@ -30,10 +30,12 @@ header div {
   display: inline;
 }
 
-header ul {
+.site-bar {
   float: right;
+  position: relative;
   margin: 35px 156px 0 0;
 }
+
 
 header a {
   padding: 19px;
@@ -68,20 +70,44 @@ header a:active {
   position: relative;
   float: right;
   top: -106px;
-  max-width: 77%;
+
 }
 
 .form-black {
   position: relative;
-  float: right;
   top: 135px;
-  left: 20%;
-  max-width: 60%;
+
 }
 
 @media screen and (max-width:1659px) {
   .form-black {
     top: -949px;
-    left: -51%;
+  }
+}
+
+/* .form-blue {
+  position: relative;
+  float: right;
+  top: -982px;
+  left: -19.5%;
+  max-width: 7.3%;
+} */
+
+@media screen and (max-width: 1076px) {
+  .page1 {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 1389px) {
+  .site-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1093px) {
+  .form-black {
+    position: relative;
+    top: -931px;
   }
 }

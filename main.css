@@ -26,6 +26,10 @@ h1 {
   display: inline;
 }
 
+header {
+  overflow: hidden;
+}
+
 header div {
   display: inline;
 }
@@ -75,7 +79,6 @@ header a:active {
   float: right;
   top: -106px;
   margin-left: 100%;
-
 }
 
 .form-black {

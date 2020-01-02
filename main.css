@@ -97,6 +97,7 @@ header a:active {
   left: 7px;
   margin-left: 100%;
   clip-path: polygon(61% 5%, 100% 55%, 61% 105%, 328px 55%);
+  transition: opacity 1s;
   z-index: 0;
 }
 

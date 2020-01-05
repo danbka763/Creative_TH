@@ -354,13 +354,13 @@ header a:active {
   right: 0;
 }
 
-.s4 .form-opacity, .s5 .form-opacity {
+.s4 .form-opacity, .s5 .form-opacity, footer .form-opacity {
   top: 90px;
   left: 50%;
   transform: translate(-50%, 0);
 }
 
-.content-s4, .content-s5 {
+.content-s4, .content-s5, .content-footer {
   position: relative;
   text-align: center;
   color: white;
@@ -396,6 +396,7 @@ header a:active {
   background: none;
   width: 400px;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
@@ -403,6 +404,61 @@ header a:active {
   text-align: right;
 }
 
+.s6 {
+  position: relative;
+  top: 235px;
+  background-color: #019edb;
+  
+}
+
+.SM_icons {
+  display: flex;
+  height: 155px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.SM_icon {
+  margin: 3px;
+}
+
+footer {
+  position: relative;
+  top: 234px;
+  height: 580px;
+  background: url(PNG/backgr_wall.png) repeat-x;
+}
+
+footer .info-blocks {
+  margin: 0px;
+}
+
+footer .info-block {
+  background: none;
+  display: flex;
+  width: 320px;
+  padding: 0;
+  margin-left: 0;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.scroll_top {
+  position: absolute;
+  background-color: #019edb;
+  width: 123px;
+  height: 62px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.scroll_top_text {
+  color: white;
+  padding: 30px 0 0 47px;
+}
 
 
 @media screen and (min-width: 1570px) {

@@ -231,7 +231,7 @@ header a:active {
   height: 128px;
 }
 
-.s2 .decor-delimiter {
+.s2 .decor-delimiter, .s5 .decor-delimiter {
   left: 49.5%;
 }
 
@@ -386,8 +386,23 @@ header a:active {
 .page7 {
   position: absolute;
   right: 0;
-
 }
+
+.s5 .info-blocks {
+  justify-content: space-around;
+}
+
+.s5 .info-block {
+  background: none;
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.s5 .first_info-block {
+  text-align: right;
+}
+
 
 
 @media screen and (min-width: 1570px) {

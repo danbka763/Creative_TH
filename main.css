@@ -79,7 +79,7 @@ header a:active {
   position: absolute;
   top: 18px;
   left: 100px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .img-logo-backgr-black {
@@ -89,7 +89,7 @@ header a:active {
   background-color: #1b1b1b;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   left: 355px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .img-logo-backgr-blue {
@@ -99,7 +99,7 @@ header a:active {
   background-color: #019edb;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   left: 91px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .s1 {
@@ -112,6 +112,18 @@ header a:active {
 
 .rhombus {
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.form-opacity {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #019edb;
+}
+
+.form-opacity div {
+  padding: 35px 55px;
 }
 
 .page1 {
@@ -197,7 +209,6 @@ header a:active {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 880px;
 }
 
 .info-block {
@@ -209,11 +220,18 @@ header a:active {
   text-align: left;
 }
 
+.s2 .info-blocks {
+  max-width: 880px;
+}
+
 .decor-delimiter {
   position: absolute;
   background-color: white;
   width: 21px;
   height: 128px;
+}
+
+.s2 .decor-delimiter {
   left: 49.5%;
 }
 
@@ -227,6 +245,148 @@ header a:active {
 
 .three_dd {
   clip-path: polygon(10px 84px, 12px 84px, 12px 128px, 10px 128px);
+}
+
+.s3 {
+  position: relative;
+  top: 410px;
+  height: 1600px;
+  overflow: hidden;
+}
+
+.page3 {
+  position: relative;
+  left: -200px;
+}
+
+.backgr-wall-2 {
+  position: absolute;
+  width: 100%;
+  height: 1300px;
+  top: 500px;
+  clip-path: polygon(0 0, 50% 730px, 100% 0, 100% 100%, 0 100%);
+}
+
+.s3 .form-opacity {
+  width: 269px;
+  height: 269px;
+  top: 455px;
+  right: 50%;
+  transform: translate(-97px, 0);
+}
+
+.s3 .form-opacity div {
+  padding: 85px 115px;
+}
+
+.form-white {
+  position: absolute;
+  background-color: white;
+  width: 533px;
+  height: 533px;
+  top: 545px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.text-form-white {
+  text-align: center;
+  color: black;
+  padding: 192px 132px;
+}
+
+.page4 {
+  position: absolute;
+  top: 670px;
+  right: 50%;
+  transform: translate(-72px, 0);
+}
+
+.page5 {
+  position: absolute;
+  top: 670px;
+  left: 50%;
+  transform: translate(72px, 0);
+}
+
+.text-s3 {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: 0 20%;
+}
+
+.s4 {
+  position: relative;
+  top: 300px;
+  height: 700px;
+  background-color: black;
+}
+
+.s4 .info-blocks {
+  margin: 60px 3% 0;
+}
+
+.s4 .info-block {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 5px;
+  width: 350px;
+  height: auto;
+  background: none;
+  z-index: 1;
+  color: white;
+}
+
+.s4 .info-block img {
+  height: 73px;
+  padding-right: 15px;
+}
+
+.s4 .info-block h2 {
+  color: #019edb;
+  font-size: 22px;
+}
+
+.page6 {
+  position: absolute;
+  right: 0;
+}
+
+.s4 .form-opacity, .s5 .form-opacity {
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.content-s4, .content-s5 {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 210px;
+}
+
+.s4 .one {
+  left: 32%;
+}
+
+.s4 .two {
+  right: 32%;
+}
+
+.s5 {
+  position: relative;
+  top: 235px;
+  height: 630px;
+  color: white;
+  background-color: #0e0c0b;
+}
+
+.page7 {
+  position: absolute;
+  right: 0;
+
 }
 
 
@@ -291,4 +451,22 @@ header a:active {
 @media screen and (max-width: 680px) {
   .img-logo-backgr-black { left: 275px; }
   .img-logo-backgr-blue { left: 11px; }
+}
+
+
+@media screen and (min-width: 1670px) {
+  .page3 { left: 0; }
+}
+
+@media screen and (min-width: 1870px) {
+  .page3 { 
+    left: -100px; 
+    width: 110%;
+  }
+
+  .backgr-wall-2 {
+    top: 400px;
+    height: 1500px;
+    clip-path: polygon(0 0, 50% 830px, 100% 0, 100% 100%, 0 100%);
+  }
 }

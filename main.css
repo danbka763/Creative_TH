@@ -130,7 +130,7 @@ header a:active {
   position: relative;
   float: right;
   margin-left: 100%;
-  clip-path: polygon(61% 5%, 100% 55%, 61% 105%, 328px 55%);
+  clip-path: polygon(61% 5%, 100% 55%, 61% 105%, 25.5% 55%);
   top: -39px;
   left: 7px;
   z-index: 1;
@@ -525,19 +525,46 @@ footer .info-block {
 }
 
 
+@media screen and (min-width: 1441px) {
+  .backgr-wall {
+    clip-path: polygon(25% 2px, 75% 2px, 100% 28%, 100% 100%, 0 100%, 0 28%);
+  }
+}
+
+
 @media screen and (min-width: 1670px) {
   .page3 { left: 0; }
 }
 
+
+@media screen and (min-width: 1852px) {
+  .backgr-wall {
+    clip-path: polygon(28% 2px, 72% 2px, 100% 31%, 100% 100%, 0 100%, 0 31%);
+  }
+}
+
+
 @media screen and (min-width: 1870px) {
+  .s3 {
+    background-color: #004d5a;
+    width: 100%;
+  }
+  
   .page3 { 
-    left: -100px; 
-    width: 110%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 2048px;
   }
 
   .backgr-wall-2 {
     top: 400px;
-    height: 1500px;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
     clip-path: polygon(0 0, 50% 830px, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .text-s3 {
+    top: -120px;
   }
 }

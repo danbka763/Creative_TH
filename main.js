@@ -10,22 +10,23 @@ $(window).resize(function(){
   header_adaptive_size();
 });
 
-// Зависимость высоты от ширины формы blue в header
-// А так-же выстроение элементов в header относительно размера window
+// Работа с header элементами
 function header_adaptive_size(){
+  // Зависимость высоты от ширины формы blue в header
   if ($(window).width() <= 420) {
     $('.logo-backgr-blue').width($(window).width()-55);
     $('.logo-backgr-blue').height(($('.logo-backgr-blue').width()/2));
 
-    
-    
     $('.img-logo').width($(window).width()-256);
   }
   else {
     $('.logo-backgr-blue').width(365);
+    $('.logo-backgr-blue').height(184);
+
     $('.img-logo').width(165);
   };
   
+  // Выстроение элементов в header относительно размера window
   if ($(window).width() <= 425) {
     $('.logo-backgr-black').css( 'left', $(window).width()-161 );
   }
@@ -37,6 +38,16 @@ function header_adaptive_size(){
       $('.logo-backgr-black').css( 'left', '355px' );
     };
   };
+
+  // Задний фон
+  if ($(window).width() <= 700 && 
+      $(window).width() > 500) {
+    $('.page1').css('left', ($(window).width() - 700 - 266));
+  }
+  else {
+    if ($(window).width() > 700) $('.page1').css('left', -266);
+    else $('.page1').css('left', -494);
+  }
 };
 
 // Зависимость высоты от ширины форм в s1

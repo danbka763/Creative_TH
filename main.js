@@ -41,24 +41,21 @@ function header_adaptive_size(){
 
 // Зависимость высоты от ширины форм в s1
 // + местоположение полигона blue относительно black
-// let firstTop_blue = parseInt($('.form-blue-big').css('top'))
-
 function adaptive_size_polygon(){
     $('.form-black').height($('.form-black').width());
     if ($(window).width() <= 680) {
       $('.form-blue-big').width($('.form-black').width()/2);
       $('.form-blue-big').height($('.form-black').height());
+
+      $('.form-blue-big').css('top', function(){
+        return parseInt($('.form-black').css('top')) + 
+                          $('.form-black').width() / 2;
+      })
     }
     else {
       $('.form-blue-big').width(500);
       $('.form-blue-big').height(500);
-    }
 
-    // let top = firstTop_blue - 284 + $('.form-black').height()/2;
-    if ($(window).width() <= 680) {
-      $('.form-blue-big').css('top', function(){
-      return parseInt($('.form-black').css('top')) + 
-                        $('.form-black').width() / 2;
-      });
+      $('.form-blue-big').css('top', 655)
     }
 };

@@ -505,6 +505,10 @@ footer .info-block {
   }
 
   .form-black { left: 0; }
+}
+
+
+@media screen and (min-width: 681px) and (max-width: 1224px) {
   .form-blue-big { left: 180px; }
 }
 
@@ -581,6 +585,21 @@ footer .info-block {
 
 @media screen and (max-width: 680px) {
   .form-blue-big {
-    left: 0;
+    top: 518px;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
   }
+
+  .text-form-blue {
+    padding-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 567px) {
+  .form-blue-big {right: 0;}
+}
+
+
+@media screen and (min-width: 568px) and (max-width: 680px) {
+  .form-blue-big { left: 283px; }
 }

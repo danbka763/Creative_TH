@@ -1,40 +1,44 @@
-// console.log($(window).width());
+// Адаптив при загрузке страницы
+$(document).ready(function(){ 
+  adaptive_size()
+  header_adaptive_size()
+});
 
-// Зависимость высоты от ширины форм в s1
-$(function(){
-  $(window).resize(function(){
-    $('.form-black').height($('.form-black').width());
-    $('.form-blue-big').height($('.form-blue-big').width());
-  });
+// адаптив при изменении размера страницы
+$(window).resize(function(){
+  adaptive_size();
+  header_adaptive_size();
 });
 
 // Зависимость высоты от ширины формы blue в header
-$(function(){
-  $(window).resize(function(){
-    if ($(window).width() <= 420) {
-      $('.logo-backgr-blue').width($(window).width()-55);
-      $('.logo-backgr-blue').height(($('.logo-backgr-blue').width()/2));
-      
-      $('.img-logo').width($(window).width()-256);
-
-      console.log($('.logo-backgr-blue').width());
+// А так-же выстроение элементов в header относительно размера window
+function header_adaptive_size(){
+  if ($(window).width() <= 420) {
+    $('.logo-backgr-blue').width($(window).width()-55);
+    $('.logo-backgr-blue').height(($('.logo-backgr-blue').width()/2));
+    
+    $('.img-logo').width($(window).width()-256);
+  }
+  else {
+    $('.logo-backgr-blue').width(365);
+    $('.img-logo').width(165);
+  };
+  
+  if ($(window).width() <= 425) {
+    $('.logo-backgr-black').css( 'left', $(window).width()-161 );
+  }
+  else {
+    if ($(window).width() <= 680) {
+      $('.logo-backgr-black').css( 'left', '264px' );
     }
     else {
-      $('.logo-backgr-blue').width(365);
-      $('.img-logo').width(165);
+      $('.logo-backgr-black').css( 'left', '355px' );
     };
+  };
+};
 
-    if ($(window).width() <= 425) {
-      $('.logo-backgr-black').css( 'left', $(window).width()-161 );
-    }
-    else {
-      if ($(window).width() <= 680) {
-        $('.logo-backgr-black').css( 'left', '264px' );
-      }
-      else {
-        $('.logo-backgr-black').css( 'left', '355px' );
-      };
-    };
-  });
-});
-
+// Зависимость высоты от ширины форм в s1
+function adaptive_size(){
+    $('.form-black').height($('.form-black').width());
+    $('.form-blue-big').height($('.form-blue-big').width());
+};

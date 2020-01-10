@@ -40,13 +40,15 @@ function header_adaptive_size(){
   };
 
   // Задний фон
-  if ($(window).width() <= 700 && 
-      $(window).width() > 500) {
+  if ($(window).width() <= 700 && $(window).width() > 500) {
     $('.page1').css('left', ($(window).width() - 700 - 266));
   }
   else {
-    if ($(window).width() > 700) $('.page1').css('left', -266);
+    if ($(window).width() > 700) $('.page1').css('left', 7);
     else $('.page1').css('left', -494);
+  }
+  if ($(window).width() <= 1024 && $(window).width() > 700) {
+    $('.page1').css('left', -266);
   }
 };
 

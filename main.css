@@ -156,7 +156,7 @@ header a:active {
   color: white;
   top: 235px; /* -87px от верха по psd */
   right: 641px;
-  z-index: 4;
+  z-index: 3;
 }
 
 .text-form-black {
@@ -176,7 +176,7 @@ header a:active {
   color: white;
   top: 655px;
   right: 528px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .page2 {

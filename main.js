@@ -1,12 +1,12 @@
 // Адаптив при загрузке страницы
 $(document).ready(function(){ 
-  adaptive_size()
-  header_adaptive_size()
+  adaptive_size_polygon();
+  header_adaptive_size();
 });
 
 // адаптив при изменении размера страницы
 $(window).resize(function(){
-  adaptive_size();
+  adaptive_size_polygon();
   header_adaptive_size();
 });
 
@@ -37,8 +37,14 @@ function header_adaptive_size(){
   };
 };
 
+let firstTop_blue = parseInt($('.form-blue-big').css('top'))
 // Зависимость высоты от ширины форм в s1
-function adaptive_size(){
+function adaptive_size_polygon(){
     $('.form-black').height($('.form-black').width());
     $('.form-blue-big').height($('.form-blue-big').width());
-};
+
+    let top = firstTop_blue - 284 + $('.form-black').height()/2;
+    $('.form-blue-big').css('top', top);
+
+    console.log($('.form-blue-big').css('top'))
+}
